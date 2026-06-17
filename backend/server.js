@@ -10,7 +10,9 @@ connectDB();
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin:"https://calculator-mak1.vercel.app"
+}));
 app.use(express.json());
 
 app.use((err, req, res, next) => {
